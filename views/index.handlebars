@@ -1,0 +1,50 @@
+<h1 class="text-center">Eat-Da-Burger!</h1>
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Ready To Eat!</h2>
+            
+                    {{#each burgers}}
+                        {{#unless this.devoured}}
+                            <li>
+                                {{this.id}}. {{this.burger_name}}
+
+                                <form action="burger/update/{{this.id}}?_method=put" method="post">
+                                    <input type="hidden" name="devoured" value="true">
+                                    <button type="submit" class="btn btn-danger btn-xs">DEVOUR!</button>
+                                </form>
+
+                            </li>
+                        {{/unless}}
+                    {{/each}}
+            
+            </div>
+
+            <div class="col-md-4 center-block">
+                <p class="text-center">What burger would you like to make?</p>
+                    <form action="/burger/create" method="post">
+                        <center><textarea name="burger_name" id="new_burger" cols="40" rows="4"></textarea></center>
+                         <center><button class="btn btn-primary" id="submit" type="submit">Burger Me!</button></center>
+                    </form>
+            </div>
+           
+            <div class="col-md-4">
+                <h3>Already Eaten!</h2>
+                
+                    {{#each burgers}}
+                        {{#if this.devoured}}
+                            <li>
+                                {{this.id}}. {{this.burger_name}}
+
+                                <form action="burger/delete/{{this.id}}?_method=delete" method="post">
+                                    <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+                                </form>
+                            </li>
+                        {{/if}}
+                    {{/each}}
+            </div> 
+        </div>
+    
+        
+</div>
