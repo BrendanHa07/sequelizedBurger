@@ -8,7 +8,7 @@ This app is a remade ok of the original burger app which can be found [here](htt
 
 ## Functionality
 
-This app has 3 major CRUD functions:
+This app has 4 major CRUD functions:
 
 - READ all entries from the MySQL database and then renders them to the DOM via handlebars.
 - UPDATES everytime a user devours a burger.
@@ -17,6 +17,9 @@ This app has 3 major CRUD functions:
 - CREATES a new burger everytime a user hits the "Burger Me" button.
   - Uses `/burger/create` route to insert new burger into the MySQL database.
   - Re-routes user back to the index page with the newly added burger in the ready to be eaten column (via Handlebars).
+ - DELETE which deletes any burger with the "Delete" button.
+  - Uses `/burger/delete/:id` route to delete a specific burger from the MySQL database.
+  - Re-routes the user back to the idex page with the specific burger deleted from the Already Eaten column (via Handlebars)
   
 ## Screenshots
 
@@ -25,6 +28,10 @@ A burger has just been added to the Ready to Eat column.
 
 A burger has just been devoured and moved to the Already Eaten column.
 ![screenshot 4](https://user-images.githubusercontent.com/25389907/31585990-b832b0ea-b17f-11e7-9942-2808fe3f9590.png)
+
+A burger has just been deleted from the Already Eaten column.
+![capture](https://user-images.githubusercontent.com/25389907/31586628-51635d3e-b188-11e7-9224-85ce38638695.PNG)
+
 
 **Check out the APP here!**
 https://hidden-shore-81036.herokuapp.com/index
