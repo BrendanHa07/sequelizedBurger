@@ -1,6 +1,7 @@
 # Eat-Da-Burger Part II!
 
 ## Overview
+
 A Node, Express, Handlebars, and MySQL burger app that allows users to order any burger that they would like to eat and then devour it!
 
 This app is a remade ok of the original burger app which can be found [here](https://github.com/BrendanHa07/burger). The difference between the two apps is that Part 2 utilizes the Sequelize ORM rather than just MySQL queries.
